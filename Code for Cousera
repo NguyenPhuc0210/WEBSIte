@@ -2,47 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Semantic HTML Page</title>
+  <title>Styled Page Example</title>
+  <style>
+    /* Style the body */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #4CAF50; /* green background */
+      padding: 20px;
+    }
+
+    /* Style the nav */
+    nav {
+      background-color: #333333;
+      padding: 10px;
+    }
+
+    /* Style the main */
+    main {
+      background-color: #f0f0f0;
+      font-size: 18px;
+      padding: 20px;
+    }
+
+    /* Style the footer */
+    footer {
+      background-color: #222222;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Style the list items */
+    li {
+      display: inline-block;
+      width: 100px;
+      color: white;
+    }
+
+    /* Style the h1 */
+    h1 {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: #0055AA;
+    }
+
+    /* Style the paragraph */
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Welcome to My Page</h1>
+    <h1>Welcome to My Website</h1>
   </header>
 
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
-      <article>
-        <h2>About This Page</h2>
-        <p>This page is built using semantic HTML5 elements to ensure structure, accessibility, and validation.</p>
-      </article>
-    </section>
-
-    <section>
-      <h2>My Favorite Foods</h2>
-      <ul>
-        <li>Pizza</li>
-        <li>Sushi</li>
-        <li>Ice Cream</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Gallery</h2>
-      <img src="https://via.placeholder.com/150" alt="Placeholder image of a sunset over mountains">
-      <img src="https://via.placeholder.com/150" alt="Placeholder image of a delicious pizza">
-      <img src="https://via.placeholder.com/150" alt="Placeholder image of a cute kitten">
-    </section>
-
-    <section>
-      <h2>Useful Link</h2>
-      <p>Visit <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Example Website</a> for more info.</p>
-    </section>
+    <p>This is a sample paragraph to demonstrate styling. The font size and background are set using CSS.</p>
+    <p>Make sure to check the color contrast using a validator like <a href="https://wave.webaim.org/">WAVE</a>.</p>
   </main>
 
   <footer>
-    <p>&copy; 2025 My Semantic Site</p>
+    &copy; 2025 My Website
   </footer>
+
 </body>
 </html>
 
