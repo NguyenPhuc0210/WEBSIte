@@ -1,85 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Styled Page Example</title>
+  <title>Interactive Photo Gallery</title>
   <style>
-    /* Style the body */
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-    }
-
-    /* Style the header */
-    header {
-      background-color: #4CAF50; /* green background */
-      padding: 20px;
-    }
-
-    /* Style the nav */
-    nav {
-      background-color: #333333;
-      padding: 10px;
-    }
-
-    /* Style the main */
-    main {
-      background-color: #f0f0f0;
-      font-size: 18px;
-      padding: 20px;
-    }
-
-    /* Style the footer */
-    footer {
-      background-color: #222222;
-      color: white;
-      padding: 10px;
+    #image {
+      height: 300px;
+      width: 100%;
+      background-color: #eee;
       text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.3s ease;
     }
 
-    /* Style the list items */
-    li {
-      display: inline-block;
+    .preview {
       width: 100px;
-      color: white;
-    }
-
-    /* Style the h1 */
-    h1 {
-      text-align: center;
-      font-family: 'Georgia', serif;
-      color: #0055AA;
-    }
-
-    /* Style the paragraph */
-    p {
-      line-height: 1.6;
+      margin: 10px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
+  <div id="image">
+    Hover over an image below to display here.
+  </div>
 
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-  </nav>
+  <img class="preview" src="https://via.placeholder.com/300x200?text=Image+1" alt="Description for Image 1" onmouseover="upDate(this);" onmouseout="undo();">
+  <img class="preview" src="https://via.placeholder.com/300x200?text=Image+2" alt="Description for Image 2" onmouseover="upDate(this);" onmouseout="undo();">
+  <img class="preview" src="https://via.placeholder.com/300x200?text=Image+3" alt="Description for Image 3" onmouseover="upDate(this);" onmouseout="undo();">
 
-  <main>
-    <p>This is a sample paragraph to demonstrate styling. The font size and background are set using CSS.</p>
-    <p>Make sure to check the color contrast using a validator like <a href="https://wave.webaim.org/">WAVE</a>.</p>
-  </main>
+  <script>
+    function upDate(previewPic) {
+      console.log("Mouse over triggered.");
+      console.log("Source: " + previewPic.src);
+      console.log("Alt text: " + previewPic.alt);
 
-  <footer>
-    &copy; 2025 My Website
-  </footer>
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+      imageDiv.innerHTML = previewPic.alt;
+    }
+
+    function undo() {
+      console.log("Mouse out triggered.");
+
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('')";
+      imageDiv.innerHTML = "Hover over an image below to display here.";
+    }
+  </script>
 
 </body>
 </html>
-
